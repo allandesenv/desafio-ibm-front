@@ -1,32 +1,41 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ClienteService } from '../../services/cliente.service';
+import { Cliente } from '../../models/cliente.model';
 
 @Component({
   selector: 'app-cadastrar-clientes',
   templateUrl: './cadastrar-clientes.component.html',
   styleUrls: ['./cadastrar-clientes.component.css']
 })
-export class CadastrarClientesComponent {
-  clienteForm: FormGroup;
-  clientes: any[] = [];
+export class CadastrarClientesComponent implements OnInit {
+  clientes: Cliente[] = [];
+  cliente: Cliente = {
+    nome: '',
+    idade: null,
+    email: '',
+    numeroConta: ''
+  };
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.clienteForm = this.fb.group({
-      nome: ['', Validators.required],
-      idade: ['', [Validators.required, Validators.min(18)]],
-      email: ['', [Validators.required, Validators.email]],
-      numeroConta: ['', Validators.required]
-    });
+  constructor(private clienteService: ClienteService) { }
+
+  ngOnInit(): void {
+    this.getClientes();
   }
 
-  onSubmit() {
-    if (this.clienteForm.valid) {
-      const cliente = this.clienteForm.value;
-      this.http.post('http://localhost:8080/clientes', cliente).subscribe(response => {
-        this.clientes.push(cliente);
-        this.clienteForm.reset();
-      });
-    }
+  getClientes(): void {
+    this.clienteService.getClientes().subscribe(
+      (clientes) => this.clientes = clientes,
+      (error) => console.error(error)
+    );
+  }
+
+  onSubmit(): void {
+    this.clienteService.addCliente(this.cliente).subscribe(
+      (novoCliente) => {
+        this.clientes.push(novoCliente);
+        this.cliente = { nome: '', idade: null, email: '', numeroConta: '' };
+      },
+      (error) => console.error(error)
+    );
   }
 }
