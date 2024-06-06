@@ -1,3 +1,62 @@
-<!-- cadastrar-clientes.component.html -->
-<h1>Cadastrar Clientes</h1>
-<p>Formulário de cadastro de clientes.</p>
+<div class="form-container">
+    <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="nome">Nome:</label>
+        <input id="nome" formControlName="nome">
+        <div *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched">
+          Nome é obrigatório.
+        </div>
+      </div>
+  
+      <div>
+        <label for="idade">Idade:</label>
+        <input id="idade" formControlName="idade" type="number">
+        <div *ngIf="clienteForm.get('idade')?.invalid && clienteForm.get('idade')?.touched">
+          <div *ngIf="clienteForm.get('idade')?.errors?.['required']">Idade é obrigatória.</div>
+          <div *ngIf="clienteForm.get('idade')?.errors?.['min']">Idade mínima é 18.</div>
+        </div>
+      </div>
+  
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email">
+        <div *ngIf="clienteForm.get('email')?.invalid && clienteForm.get('email')?.touched">
+          <div *ngIf="clienteForm.get('email')?.errors?.['required']">Email é obrigatório.</div>
+          <div *ngIf="clienteForm.get('email')?.errors?.['email']">Email inválido.</div>
+        </div>
+      </div>
+  
+      <div>
+        <label for="numeroConta">Número da Conta:</label>
+        <input id="numeroConta" formControlName="numeroConta">
+        <div *ngIf="clienteForm.get('numeroConta')?.invalid && clienteForm.get('numeroConta')?.touched">
+          Número da Conta é obrigatório.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="clienteForm.invalid">Cadastrar</button>
+    </form>
+  </div>
+  
+  <div class="grid-container">
+    <h2>Clientes Cadastrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Email</th>
+          <th>Número da Conta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.nome }}</td>
+          <td>{{ cliente.idade }}</td>
+          <td>{{ cliente.email }}</td>
+          <td>{{ cliente.numeroConta }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

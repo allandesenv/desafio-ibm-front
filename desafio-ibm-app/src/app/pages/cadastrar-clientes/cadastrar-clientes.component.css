@@ -1,0 +1,27 @@
+.form-container {
+    margin: 20px;
+  }
+  
+  .form-container div {
+    margin-bottom: 10px;
+  }
+  
+  .grid-container {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #333;
+    color: white;
+  }
+  
