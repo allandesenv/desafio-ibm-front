@@ -1,10 +1,16 @@
 <div class="app-container">
   <div class="top-bar"></div>
+
+  <!-- Ícone do menu tipo hambúrguer -->
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <input type="checkbox" id="menu-toggle" style="display:none;">
+
   <div class="content">
     <app-menu class="menu"></app-menu>
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
   </div>
+
   <div class="footer">Rodapé fixo</div>
 </div>
