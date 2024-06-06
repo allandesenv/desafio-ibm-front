@@ -6,7 +6,7 @@ import { CreditoComponent } from './pages/credito/credito.component';
 import { DebitoComponent } from './pages/debito/debito.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'cadastrar-clientes', component: CadastrarClientesComponent },
   { path: 'credito', component: CreditoComponent },
   { path: 'debito', component: DebitoComponent }

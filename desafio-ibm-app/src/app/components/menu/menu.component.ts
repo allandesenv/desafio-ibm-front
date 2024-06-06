@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
+  @Input() isMenuOpen: boolean = false; // Inicializado com false
 }

@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CadastrarClientesComponent } from './pages/cadastrar-clientes/cadastrar-clientes.component';
 import { CreditoComponent } from './pages/credito/credito.component';
 import { DebitoComponent } from './pages/debito/debito.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DebitoComponent } from './pages/debito/debito.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
