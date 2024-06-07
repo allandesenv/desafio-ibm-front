@@ -1,3 +1,19 @@
-<!-- credito.component.html -->
-<h1>Crédito</h1>
-<p>Página de crédito.</p>
+<div class="credito-container">
+    <h2>Adicionar Crédito</h2>
+    <form (ngSubmit)="onSubmit()" class="credito-form">
+      <div>
+        <label for="id_cliente">Id Cliente:</label>
+        <input type="text" id="id_cliente" required [(ngModel)]="operacao.id_cliente" name="id_cliente">
+      </div>
+      <div>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" required [(ngModel)]="operacao.valor" name="valor">
+      </div>
+      <button type="submit">Adicionar</button>
+    </form>
+    <div *ngIf="mensagem" [ngClass]="{'success-message': isSuccess, 'error-message': !isSuccess}">
+      {{ mensagem }}
+    </div>
+  </div>
+  
+  

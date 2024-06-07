@@ -1,0 +1,58 @@
+.credito-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #0033a0; /* Azul IBM */
+  }
+  
+  .credito-form {
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #0033a0; /* Azul IBM */
+  }
+  
+  .credito-form div {
+    margin-bottom: 10px;
+  }
+  
+  .credito-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0033a0; /* Azul IBM */
+  }
+  
+  .credito-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0033a0; /* Azul IBM */
+    border-radius: 4px;
+  }
+  
+  .credito-form button {
+    background-color: #0033a0; /* Azul IBM */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .credito-form button:hover {
+    background-color: #001f70; /* Azul IBM escuro */
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
