@@ -45,7 +45,7 @@ body, html {
   .main-content {
     flex: 1;
     padding: 15px;
-    margin-left: 200px; /* Compensar a largura do menu */
+    margin-left: 100px; /* Compensar a largura do menu */
   }
   
   .footer {

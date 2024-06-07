@@ -1,0 +1,18 @@
+/* src/app/pages/home/home.component.css */
+.home-container {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #0033a0; /* Azul IBM */
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #666;
+    font-size: 18px;
+  }
+  

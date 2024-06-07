@@ -1,3 +1,4 @@
+// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -7,7 +8,7 @@ import { DebitoComponent } from './pages/debito/debito.component';
 import { ExtratoComponent } from './pages/extrato/extrato.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'cadastrar-clientes', component: CadastrarClientesComponent },
   { path: 'credito', component: CreditoComponent },
   { path: 'debito', component: DebitoComponent },
