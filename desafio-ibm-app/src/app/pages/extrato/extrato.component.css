@@ -1,0 +1,57 @@
+/* src/app/pages/extrato/extrato.component.css */
+.extrato-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #0033a0; /* Azul IBM */
+  }
+  
+  .extrato-form {
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #0033a0; /* Azul IBM */
+  }
+  
+  .extrato-form div {
+    margin-bottom: 10px;
+  }
+  
+  .extrato-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0033a0; /* Azul IBM */
+  }
+  
+  .extrato-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0033a0; /* Azul IBM */
+    border-radius: 4px;
+  }
+  
+  .extrato-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .extrato-table th, .extrato-table td {
+    border: 1px solid #0033a0; /* Azul IBM */
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .saldo-total {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .no-data {
+    margin-top: 20px;
+    color: #ff0000; /* Vermelho */
+  }
+  

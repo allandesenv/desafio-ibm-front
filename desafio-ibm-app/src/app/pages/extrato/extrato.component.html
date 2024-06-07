@@ -1,0 +1,37 @@
+<!-- src/app/pages/extrato/extrato.component.html -->
+<div class="extrato-container">
+    <h2>Extrato do Cliente</h2>
+    <div class="extrato-form">
+      <div>
+        <label for="id_cliente">Selecionar Cliente:</label>
+        <select id="id_cliente" [(ngModel)]="clienteId" (change)="onClienteChange()">
+          <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nome }}</option>
+        </select>
+      </div>
+    </div>
+    <div *ngIf="extrato.length > 0" class="extrato-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let operacao of extrato">
+            <td>{{ operacao.dataHora | date:'short' }}</td>
+            <td>{{ operacao.tipo }}</td>
+            <td>{{ operacao.valor }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="saldo-total">
+        <strong>Saldo Total: </strong>{{ saldoTotal }}
+      </div>
+    </div>
+    <div *ngIf="extrato.length === 0 && clienteId !== null" class="no-data">
+      Nenhuma operação encontrada para o cliente selecionado.
+    </div>
+  </div>
+  

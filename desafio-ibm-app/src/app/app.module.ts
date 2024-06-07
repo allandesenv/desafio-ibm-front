@@ -11,9 +11,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CadastrarClientesComponent } from './pages/cadastrar-clientes/cadastrar-clientes.component';
 import { CreditoComponent } from './pages/credito/credito.component';
 import { DebitoComponent } from './pages/debito/debito.component';
+import { ExtratoComponent } from './pages/extrato/extrato.component';
 import { ClienteService } from './services/cliente.service';
 import { CreditoService } from './services/credito.service';
 import { DebitoService } from './services/debito.service';
+import { ExtratoService } from './services/extrato.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { DebitoService } from './services/debito.service';
     MenuComponent,
     CadastrarClientesComponent,
     CreditoComponent,
-    DebitoComponent
+    DebitoComponent,
+    ExtratoComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { DebitoService } from './services/debito.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClienteService, CreditoService, DebitoService],
+  providers: [ClienteService, CreditoService, DebitoService, ExtratoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
