@@ -19,3 +19,14 @@ nav {
     background-color: #444; /* Cor ao passar o mouse */
   }
   
+  /* Estilos para o menu no modo mobile */
+  @media (max-width: 600px) {
+    nav {
+      display: none; /* Esconde o menu por padrão */
+    }
+  
+    nav.open {
+      display: flex; /* Mostra o menu quando a classe 'open' está presente */
+    }
+  }
+  

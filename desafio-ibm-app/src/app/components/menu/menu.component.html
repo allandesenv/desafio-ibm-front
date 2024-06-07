@@ -1,7 +1,8 @@
 <nav [class.open]="isMenuOpen"> <!-- Adiciona a classe 'open' quando o menu está aberto -->
-    <a routerLink="/">Página Inicial</a>
-    <a routerLink="/cadastrar-clientes">Cadastrar Clientes</a>
-    <a routerLink="/credito">Crédito</a>
-    <a routerLink="/debito">Débito</a>
-    <a routerLink="/extrato">Extrato</a>
-</nav>
+    <a routerLink="/" (click)="closeMenu()">Página Inicial</a>
+    <a routerLink="/cadastrar-clientes" (click)="closeMenu()">Cadastrar Clientes</a>
+    <a routerLink="/credito" (click)="closeMenu()">Crédito</a>
+    <a routerLink="/debito" (click)="closeMenu()">Débito</a>
+    <a routerLink="/extrato" (click)="closeMenu()">Extrato</a>
+  </nav>
+  

@@ -45,7 +45,7 @@ body, html {
   .main-content {
     flex: 1;
     padding: 15px;
-    margin-left: 100px; /* Compensar a largura do menu */
+    margin-left: 200px; /* Compensar a largura do menu */
   }
   
   .footer {
@@ -77,12 +77,15 @@ body, html {
     }
   
     .menu {
-      transform: translateX(0%);
+      transform: translateX(-100%);
       position: fixed;
       z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: #333; /* Fundo escuro */
     }
   
-    input[type="checkbox"]:checked ~ .menu {
+    .menu.open {
       transform: translateX(0);
     }
   
@@ -90,13 +93,4 @@ body, html {
       margin-left: 0;
     }
   }
-  
-  /* Outros estilos */
-
-.menu-icon {
-    /* Outros estilos */
-    cursor: pointer;
-  }
-  
-  /* Outros estilos */
   
