@@ -2,11 +2,11 @@
   <div class="top-bar"></div>
 
   <!-- Ícone do menu tipo hambúrguer -->
-  <input type="checkbox" id="menu-toggle" [checked]="isMenuOpen" style="display:none;">
+  <input type="checkbox" id="menu-toggle" style="display:none;">
   <label for="menu-toggle" class="menu-icon" (click)="toggleMenu()">&#9776;</label>
 
   <div class="content">
-    <app-menu class="menu" [isMenuOpen]="isMenuOpen"></app-menu>
+    <app-menu class="menu" [isMenuOpen]="isMenuOpen" (menuToggle)="toggleMenu()"></app-menu>
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>

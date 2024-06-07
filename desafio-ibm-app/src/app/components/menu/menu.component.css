@@ -1,12 +1,18 @@
 nav {
-    display: flex;
     flex-direction: column;
+  }
+  
+  nav.open {
+    display: flex; /* Mostra o menu quando a classe 'open' está presente */
   }
   
   a {
     padding: 15px;
     text-decoration: none;
     color: white; /* Letras brancas */
+    display: block; /* Garante que cada link seja exibido em uma linha separada */
+    width: 100%; /* Garante que os links ocupem a largura total do contêiner */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura */
   }
   
   a:hover {
