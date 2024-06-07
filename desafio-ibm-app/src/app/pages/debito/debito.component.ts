@@ -11,7 +11,7 @@ import { ClienteService } from '../../services/cliente.service';
 export class DebitoComponent implements OnInit {
   operacao: any = {
     id_cliente: 1,
-    valor: 0
+    valor: ""
   };
   mensagem: string | null = null;
   isSuccess: boolean = false;
