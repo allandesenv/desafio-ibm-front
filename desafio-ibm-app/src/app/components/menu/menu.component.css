@@ -1,5 +1,7 @@
+/* Estilos gerais do menu */
 nav {
     flex-direction: column;
+    display: flex; /* Mostra o menu por padrão */
   }
   
   nav.open {
@@ -19,10 +21,10 @@ nav {
     background-color: #444; /* Cor ao passar o mouse */
   }
   
-  /* Estilos para o menu no modo mobile */
+  /* Esconde o menu por padrão em telas menores */
   @media (max-width: 600px) {
     nav {
-      display: none; /* Esconde o menu por padrão */
+      display: none; /* Esconde o menu por padrão em telas menores */
     }
   
     nav.open {

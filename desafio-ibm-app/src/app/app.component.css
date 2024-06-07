@@ -45,7 +45,7 @@ body, html {
   .main-content {
     flex: 1;
     padding: 15px;
-    margin-left: 200px; /* Compensar a largura do menu */
+    margin-left: 100px; /* Compensar a largura do menu */
   }
   
   .footer {
@@ -77,16 +77,14 @@ body, html {
     }
   
     .menu {
-      transform: translateX(-100%);
+      transform: translateX(0%); /* Esconde o menu para fora da tela */
       position: fixed;
       z-index: 1;
-      width: 100%;
-      height: 100%;
-      background-color: #333; /* Fundo escuro */
+      transition: transform 0.3s ease;
     }
   
     .menu.open {
-      transform: translateX(0);
+      transform: translateX(0); /* Move o menu para dentro da tela */
     }
   
     .main-content {
