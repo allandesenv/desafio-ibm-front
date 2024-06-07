@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ClienteService } from '../../services/cliente.service';
 import { Cliente } from '../../models/cliente.model';
 
@@ -15,6 +16,7 @@ export class CadastrarClientesComponent implements OnInit {
     email: '',
     numeroConta: ''
   };
+  submitted = false;
 
   constructor(private clienteService: ClienteService) { }
 
@@ -29,13 +31,18 @@ export class CadastrarClientesComponent implements OnInit {
     );
   }
 
-  onSubmit(): void {
-    this.clienteService.addCliente(this.cliente).subscribe(
-      (novoCliente) => {
-        this.clientes.push(novoCliente);
-        this.cliente = { nome: '', idade: null, email: '', numeroConta: '' };
-      },
-      (error) => console.error(error)
-    );
+  onSubmit(form: NgForm): void {
+    this.submitted = true;
+    if (form.valid) {
+      this.clienteService.addCliente(this.cliente).subscribe(
+        (novoCliente) => {
+          this.clientes.push(novoCliente);
+          this.cliente = { nome: '', idade: null, email: '', numeroConta: '' };
+          form.resetForm(); // Reseta o formulário após o envio
+          this.submitted = false; // Reset da flag após o envio bem-sucedido
+        },
+        (error) => console.error(error)
+      );
+    }
   }
 }

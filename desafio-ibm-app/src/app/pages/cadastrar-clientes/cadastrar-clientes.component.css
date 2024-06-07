@@ -1,4 +1,4 @@
-/* src/app/pages/cadastrar-clientes/cadastrar-clientes.component.css */
+/* Estilos gerais e layout */
 .cadastrar-clientes-container {
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -66,5 +66,12 @@
   
   .clientes-grid tr:nth-child(even) {
     background-color: #f4f4f4;
+  }
+  
+  /* Estilos para mensagens de erro */
+  .error {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 5px;
   }
   
