@@ -12,6 +12,8 @@ import { CadastrarClientesComponent } from './pages/cadastrar-clientes/cadastrar
 import { CreditoComponent } from './pages/credito/credito.component';
 import { DebitoComponent } from './pages/debito/debito.component';
 import { ClienteService } from './services/cliente.service';
+import { CreditoService } from './services/credito.service';
+import { DebitoService } from './services/debito.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { ClienteService } from './services/cliente.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClienteService],
+  providers: [ClienteService, CreditoService, DebitoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
