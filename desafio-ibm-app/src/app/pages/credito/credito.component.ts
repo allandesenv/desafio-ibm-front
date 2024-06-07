@@ -9,7 +9,7 @@ import { CreditoService } from '../../services/credito.service';
 })
 export class CreditoComponent {
   operacao: any = {
-    id_cliente: '',
+    id_cliente: 1,
     valor: 0
   };
   mensagem: string | null = null;
