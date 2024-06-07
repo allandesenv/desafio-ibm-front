@@ -1,9 +1,12 @@
+<!-- src/app/pages/credito/credito.component.html -->
 <div class="credito-container">
     <h2>Adicionar Crédito</h2>
     <form (ngSubmit)="onSubmit()" class="credito-form">
       <div>
-        <label for="id_cliente">Id Cliente:</label>
-        <input type="text" id="id_cliente" required [(ngModel)]="operacao.id_cliente" name="id_cliente">
+        <label for="id_cliente">Selecione o Cliente:</label>
+        <select id="id_cliente" required [(ngModel)]="operacao.id_cliente" name="id_cliente">
+          <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nome }}</option>
+        </select>
       </div>
       <div>
         <label for="valor">Valor:</label>
@@ -15,5 +18,4 @@
       {{ mensagem }}
     </div>
   </div>
-  
   
