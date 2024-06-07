@@ -31,11 +31,23 @@ export class CreditoComponent implements OnInit {
       response => {
         this.mensagem = 'Crédito adicionado com sucesso!';
         this.isSuccess = true;
+        this.resetForm();
       },
       error => {
         this.mensagem = 'Erro ao adicionar crédito. Tente novamente.';
         this.isSuccess = false;
+        this.resetForm();
       }
     );
+  }
+
+  resetForm() {
+    this.operacao = {
+      id_cliente: 1,
+      valor: 0
+    };
+    setTimeout(() => {
+      this.mensagem = null;
+    }, 3000);
   }
 }

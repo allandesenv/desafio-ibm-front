@@ -1,3 +1,4 @@
+/* src/app/pages/credito/credito.component.css */
 .credito-container {
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -26,7 +27,8 @@
     color: #0033a0; /* Azul IBM */
   }
   
-  .credito-form input {
+  .credito-form input,
+  .credito-form select {
     width: 100%;
     padding: 8px;
     border: 1px solid #0033a0; /* Azul IBM */

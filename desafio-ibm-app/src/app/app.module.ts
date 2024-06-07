@@ -11,7 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CadastrarClientesComponent } from './pages/cadastrar-clientes/cadastrar-clientes.component';
 import { CreditoComponent } from './pages/credito/credito.component';
 import { DebitoComponent } from './pages/debito/debito.component';
-import { ClienteService } from './services/cliente.service'; // Importar ClienteService
+import { ClienteService } from './services/cliente.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { ClienteService } from './services/cliente.service'; // Importar Cliente
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClienteService], // Adicionar ClienteService aos providers
+  providers: [ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
