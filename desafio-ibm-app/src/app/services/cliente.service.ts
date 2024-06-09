@@ -18,4 +18,8 @@ export class ClienteService {
   addCliente(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(this.baseUrl, cliente);
   }
+
+  getSaldoCliente(clienteId: string): Observable<number> {
+    return this.http.get<number>(`${this.baseUrl}/${clienteId}/saldo`);
+  }
 }
