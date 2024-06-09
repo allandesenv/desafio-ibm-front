@@ -1,0 +1,83 @@
+/* Estilos gerais e layout */
+.cadastrar-clientes-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+  color: #0033a0; /* Azul IBM */
+}
+
+.cliente-form {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #0033a0; /* Azul IBM */
+}
+
+.cliente-form div {
+  margin-bottom: 10px;
+}
+
+.cliente-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #0033a0; /* Azul IBM */
+}
+
+.cliente-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #0033a0; /* Azul IBM */
+  border-radius: 4px;
+}
+
+.cliente-form button {
+  background-color: #0033a0; /* Azul IBM */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cliente-form button:hover {
+  background-color: #001f70; /* Azul IBM escuro */
+}
+
+.clientes-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.clientes-grid th, .clientes-grid td {
+  border: 1px solid #0033a0; /* Azul IBM */
+  padding: 10px;
+  text-align: left;
+}
+
+.clientes-grid th {
+  background-color: #0033a0; /* Azul IBM */
+  color: white;
+}
+
+.clientes-grid tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+/* Estilos para mensagens de erro */
+.error {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+/* Estilos para campos obrigatórios */
+.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}

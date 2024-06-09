@@ -1,0 +1,39 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .top-bar {
+    background-color: #052FAD; /* Cor azul da IBM */
+    height: 50px;
+    width: 100%;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .menu {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 0px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  .footer {
+    background-color: #052FAD; /* Cor azul da IBM */
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+  }
+  

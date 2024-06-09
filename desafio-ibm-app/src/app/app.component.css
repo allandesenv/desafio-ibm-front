@@ -1,0 +1,94 @@
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .top-bar {
+    background-color: #052FAD; /* Cor azul da IBM */
+    height: 50px;
+    width: 100%;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .menu {
+    width: 200px;
+    background-color: #545288; /* Fundo escuro */
+    color: white; /* Letras brancas */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: white; /* Letras brancas */
+  }
+  
+  .menu a:hover {
+    background-color: #444; /* Cor ao passar o mouse */
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 15px;
+    margin-left: 100px; /* Compensar a largura do menu */
+  }
+  
+  .footer {
+    background-color: #052FAD; /* Cor azul da IBM */
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para o ícone do menu */
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+  }
+  
+  /* Comportamento do menu em telas menores */
+  @media (max-width: 600px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu {
+      transform: translateX(0%); /* Esconde o menu para fora da tela */
+      position: fixed;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+  
+    .menu.open {
+      transform: translateX(0); /* Move o menu para dentro da tela */
+    }
+  
+    .main-content {
+      margin-left: 0;
+    }
+  }
+  
