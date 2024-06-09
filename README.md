@@ -24,7 +24,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
    ```sh
    git clone https://github.com/allandesenv/desafio-ibm-front.git
-   cd desafio-ibm-front
+   cd desafio-ibm-front/desafio-ibm-app
 
 2. Instale as dependências do projeto:
 
