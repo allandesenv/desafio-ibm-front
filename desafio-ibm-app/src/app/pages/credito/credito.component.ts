@@ -10,8 +10,8 @@ import { ClienteService } from '../../services/cliente.service';
 })
 export class CreditoComponent implements OnInit {
   operacao: any = {
-    id_cliente: 1,
-    valor: ""
+    id_cliente: "",
+    valor: 0
   };
   mensagem: string | null = null;
   isSuccess: boolean = false;
@@ -43,7 +43,7 @@ export class CreditoComponent implements OnInit {
 
   resetForm() {
     this.operacao = {
-      id_cliente: 1,
+      id_cliente: "",
       valor: 0
     };
     setTimeout(() => {

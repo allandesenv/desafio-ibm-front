@@ -1,59 +1,57 @@
-<!-- src/app/pages/cadastrar-clientes/cadastrar-clientes.component.html -->
 <div class="cadastrar-clientes-container">
-    <h2>Cadastrar Clientes</h2>
-    <form (ngSubmit)="onSubmit(clienteForm)" #clienteForm="ngForm" class="cliente-form">
-      <div>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required [(ngModel)]="cliente.nome" name="nome" pattern="^[a-zA-Z\s]+$" #nome="ngModel">
-        <div *ngIf="submitted && nome.invalid" class="error">
-          <div *ngIf="nome.errors?.['required']">Nome é obrigatório.</div>
-          <div *ngIf="nome.errors?.['pattern']">Nome deve conter apenas letras.</div>
-        </div>
+  <h2>Cadastrar Clientes</h2>
+  <form (ngSubmit)="onSubmit(clienteForm)" #clienteForm="ngForm" class="cliente-form">
+    <div>
+      <label for="nome" class="required">Nome: *</label>
+      <input type="text" id="nome" required [(ngModel)]="cliente.nome" name="nome" pattern="^[a-zA-Z\s]+$" #nome="ngModel">
+      <div *ngIf="submitted && nome.invalid" class="error">
+        <div *ngIf="nome.errors?.['required']">Nome é obrigatório.</div>
+        <div *ngIf="nome.errors?.['pattern']">Nome deve conter apenas letras.</div>
       </div>
-      <div>
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" required [(ngModel)]="cliente.idade" name="idade" #idade="ngModel">
-        <div *ngIf="submitted && idade.invalid" class="error">
-          <div *ngIf="idade.errors?.['required']">Idade é obrigatória.</div>
-        </div>
+    </div>
+    <div>
+      <label for="idade" class="required">Idade: *</label>
+      <input type="number" id="idade" required [(ngModel)]="cliente.idade" name="idade" #idade="ngModel">
+      <div *ngIf="submitted && idade.invalid" class="error">
+        <div *ngIf="idade.errors?.['required']">Idade é obrigatória.</div>
       </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" required [(ngModel)]="cliente.email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" #email="ngModel">
-        <div *ngIf="submitted && email.invalid" class="error">
-          <div *ngIf="email.errors?.['required']">Email é obrigatório.</div>
-          <div *ngIf="email.errors?.['pattern']">Email inválido.</div>
-        </div>
+    </div>
+    <div>
+      <label for="email" class="required">Email: *</label>
+      <input type="email" id="email" required [(ngModel)]="cliente.email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" #email="ngModel">
+      <div *ngIf="submitted && email.invalid" class="error">
+        <div *ngIf="email.errors?.['required']">Email é obrigatório.</div>
+        <div *ngIf="email.errors?.['pattern']">Email inválido.</div>
       </div>
-      <div>
-        <label for="numeroConta">Número da Conta:</label>
-        <input type="number" id="numeroConta" required [(ngModel)]="cliente.numeroConta" name="numeroConta" pattern="^\d+$" #numeroConta="ngModel">
-        <div *ngIf="submitted && numeroConta.invalid" class="error">
-          <div *ngIf="numeroConta.errors?.['required']">Número da Conta é obrigatório.</div>
-          <div *ngIf="numeroConta.errors?.['pattern']">Número da Conta deve conter apenas números.</div>
-        </div>
+    </div>
+    <div>
+      <label for="numeroConta" class="required">Número da Conta: *</label>
+      <input type="number" id="numeroConta" required [(ngModel)]="cliente.numeroConta" name="numeroConta" pattern="^\d+$" #numeroConta="ngModel">
+      <div *ngIf="submitted && numeroConta.invalid" class="error">
+        <div *ngIf="numeroConta.errors?.['required']">Número da Conta é obrigatório.</div>
+        <div *ngIf="numeroConta.errors?.['pattern']">Número da Conta deve conter apenas números.</div>
       </div>
-      <button type="submit">Cadastrar</button>
-    </form>
-  
-    <h3>Clientes Cadastrados</h3>
-    <table class="clientes-grid">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Idade</th>
-          <th>Email</th>
-          <th>Número da Conta</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let cliente of clientes">
-          <td>{{ cliente.nome }}</td>
-          <td>{{ cliente.idade }}</td>
-          <td>{{ cliente.email }}</td>
-          <td>{{ cliente.numeroConta }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+    </div>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <h3>Clientes Cadastrados</h3>
+  <table class="clientes-grid">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Email</th>
+        <th>Número da Conta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.idade }}</td>
+        <td>{{ cliente.email }}</td>
+        <td>{{ cliente.numeroConta }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
