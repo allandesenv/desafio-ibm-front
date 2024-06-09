@@ -28,14 +28,14 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
 2. Instale as dependências do projeto:
 
-  ```sh
+   ```sh
    npm install
 
-Executando a Aplicação
+3. Executando a Aplicação
 
-Para rodar a aplicação localmente, utilize o comando:
+   Para rodar a aplicação localmente, utilize o comando:
 
-  ```sh
-  ng serve
+     ```sh
+     ng serve
 
 3. Depois, abra seu navegador e acesse http://localhost:4200/.
