@@ -27,18 +27,24 @@ export class CreditoComponent implements OnInit {
   }
 
   onSubmit() {
-    this.creditoService.addCredito(this.operacao.id_cliente, this.operacao.valor).subscribe(
-      response => {
-        this.mensagem = 'Crédito adicionado com sucesso!';
-        this.isSuccess = true;
-        this.resetForm();
-      },
-      error => {
-        this.mensagem = 'Erro ao adicionar crédito. Tente novamente.';
-        this.isSuccess = false;
-        this.resetForm();
-      }
-    );
+    // Verifica se o cliente foi selecionado e se o valor é maior que zero
+    if (this.operacao.id_cliente && this.operacao.valor > 0) {
+      this.creditoService.addCredito(this.operacao.id_cliente, this.operacao.valor).subscribe(
+        response => {
+          this.mensagem = 'Crédito adicionado com sucesso!';
+          this.isSuccess = true;
+          this.resetForm();
+        },
+        error => {
+          this.mensagem = 'Erro ao adicionar crédito. Tente novamente.';
+          this.isSuccess = false;
+          this.resetForm();
+        }
+      );
+    } else {
+      // Exibe mensagem de erro se o cliente não estiver selecionado ou se o valor for zero ou menor
+      this.mensagem = 'Selecione um cliente e insira um valor maior que zero.';
+    }
   }
 
   resetForm() {
